@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Conta</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <section class="cal-section">
+        <div class="cal-container">
+            <h1>Calculadora</h1>
+            <form class="form-container" id="calForm">
+
+                <!-- Número de pessoas -->
+                <div class="input-container">
+                    <label for="clientes">Quantidade de Clientes:</label>
+                    <input class="input-element"
+                    type="number"
+                    id="clientes"
+                    name="clientes"
+                    placeholder="1"
+                    min="1"
+                    required
+                    />
+                </div>
+
+                <!-- Valor total da conta -->
+                <div class="input-container">
+                    <label for="valor">Valor Total:</label>
+                    <input class="input-element"
+                    type="text"
+                    id="valor"
+                    name="valor"
+                    placeholder="R$ 0,00"
+                    min="0"
+                    required
+                    />
+                </div>
+
+                <!-- Método de pagamento -->
+                <div class="input-container">
+                    <label for="método">Método de Pagamento</label>
+                    <select class="input-element"
+                    id="método"
+                    required
+                    >
+                         <option value="" disabled selected>Selecione...</option>
+                         <option value="pix">PIX</option>
+                         <option value="dinheiro">Dinheiro</option>
+                         <option value="cartao">Cartão</option>
+                    </select>
+                </div>
+
+                <!-- Botão de Cálculo -->
+                <button id="button-submit"
+                type="submit">
+                Calcular
+                </button>
+                
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
